@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;800&display=swap');
+/***** Cleanup *****/
+
+*,*::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: 'Nunito Sans', sans-serif;    
+    --main-color: #8F00FF;
+    color: var(--main-color);
+}
+
+/***** Basics *****/
+button {
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    background-color: #fff;
+    border-radius: 5px;
+    height: 4rem;
+    width: 4rem;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button_click {
+    background-color: rgb(240, 240, 240);
+}
+
+.container {
+    width: 100%;
+    max-width: 21em;
+    margin: auto;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+h1 {
+    grid-area: header;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: .6rem;
+    font-weight: 200;
+    align-self: flex-end;
+}
+
+/***** Metronome *****/
+.metronome {
+    background-color: lightgreen;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+        "header header header header header"
+        "bpm-count bpm-count bpm-count play-btn play-btn"
+        "slider slider slider slider slider";
+    /* align-items: center; */
+}
+
+.metronome .bpm-count {
+    grid-area: bpm-count;
+    margin: auto;
+}
+
+.metronome .bpm-count output {
+    font-size: 4rem;
+    font-weight: 800;
+    display: inline-block;
+    width: 7rem;
+    /* background-color: lightsalmon; */
+    text-align: right;
+}
+
+.metronome .bpm-count span {
+    position: relative;
+    bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.metronome button {
+    grid-area: play-btn;
+    margin: auto;
+}
+
+.slider {
+    grid-area: slider;
+    appearance: none;
+    width: 100%;
+    height: 2rem;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+}
+
+.slider::-moz-range-thumb {
+    height: 1.5rem;
+    width: 1rem;
+    border-radius: 2px;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+/*****Counter*****/
+.counter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "header header header"
+        "rep-count rep-count rep-count"
+        "minus-btn plus-btn reset-btn";
+}
+
+.counter .rep-count {
+    grid-area: rep-count;
+    font-size: 4rem;
+    font-weight: 800;
+    display: inline-block;
+    width: 7rem;
+    margin: auto;
+    text-align: center;
+    /* background-color: lightsalmon; */
+}
+
+.counter #rep-minus {
+    grid-area: minus-btn;
+}
+.counter #rep-plus {
+    grid-area: plus-btn;
+}
+.counter #rep-reset {
+    grid-area: reset-btn;
+}
+
+.counter button {
+    margin: auto;
+}
+
+
+/**** Record ****/
+.record {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "header header header"
+        "rec-msg rec-msg rec-msg"
+        "rec-btn play-btn trash-btn";
+}
+
+.record .record_msg {
+    grid-area: rec-msg;
+    text-align: center;
+    align-self: center;
+}
+
+.record #rec-btn {
+    grid-area: rec-btn;
+}
+.record #play-btn {
+    grid-area: play-btn;
+}
+.record #trash-btn {
+    grid-area: trash-btn;
+}
+
+.record button {
+    margin: auto;
+}

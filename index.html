@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metronome</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/node_modules/howler/dist/howler.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/4d1a468bbd.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <div class="container">
+        <section class="metronome">
+            <h1>Metronome</h1>
+            <div class="bpm-count">
+                <output for="metronome-slider"></output>
+                <span>BPM</span>
+            </div>
+            <button type="button" class="fas fa-play" id="mtr-play"></button>
+            <input type="range" name="metronome-slider" id="metronome-slider" min="50" max="230" step="1" value="120" class="slider">
+        </section>
+        <section class="counter">
+            <h1>Counter</h1>
+            <p class="rep-count"></p>
+            <button class="fas fa-minus" id="rep-minus"></button>
+            <button class="fas fa-plus" id="rep-plus"></button>
+            <button class="fas fa-undo-alt" id="rep-reset"></button>
+        </section>
+        <section class="record">
+            <h1>Record</h1>
+            <p class="record_msg">No audio recorded.</p>
+            <button class="fas fa-circle" id="rec-btn"></button>
+            <button class="fas fa-play" id="play-btn"></button>
+            <button class="fas fa-trash" id="trash-btn"></button>
+        </section>
+    </div>
+</body>
+</html>
