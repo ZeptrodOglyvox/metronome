@@ -5,7 +5,7 @@ let state = 0;
 
 output.textContent = slider.value;
 const sound = new Howl({
-    src: ['audio/metronome-pulse.wav'],
+    src: ['audio/metronome-pulse-louder.wav'],
 }); // TODO Howler is too much for this, just use the Audio API
 
 let loopId = undefined;

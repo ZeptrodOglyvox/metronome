@@ -2,7 +2,7 @@ class Recorder {
     constructor() {
         navigator.mediaDevices.getUserMedia({audio: true})
         .then((stream) => {
-            this.mediaRecorder = new MediaRecorder(stream);
+            this.mediaRecorder = new MediaRecorder(stream, {audioBitsPerSecond: 256000});
             this.audioBlobs = [];
     
             this.mediaRecorder.addEventListener('dataavailable', (e) => {
