@@ -1,6 +1,6 @@
-import './metronome.js';
-import './counter.js';
-import './record.js';
+// import './metronome.js';
+// import './counter.js';
+// import './record.js';
 
 // Button click effect 
 const buttons = document.querySelectorAll('button');

@@ -87,6 +87,10 @@ playButton.addEventListener('click', () => {
 });
 
 delButton.addEventListener('click', () => {
+    if(playState) {
+        audioRecorder.audio.pause();
+        togglePlayState();
+    }
     audioRecorder.clear();
     recordMsg.textContent = 'No audio recorded.'
 });
