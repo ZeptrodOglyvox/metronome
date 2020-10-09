@@ -20,8 +20,8 @@ button {
     border: 2px solid var(--main-color);
     background-color: #fff;
     border-radius: 5px;
-    height: 4rem;
-    width: 4rem;
+    height: 5rem;
+    width: 5rem;
     font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
@@ -44,6 +44,14 @@ button {
 }
 
 h1 {
+    padding-top: 1rem;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    /* letter-spacing: .1rem; */
+}
+
+h2 {
     grid-area: header;
     text-align: right;
     text-transform: uppercase;
